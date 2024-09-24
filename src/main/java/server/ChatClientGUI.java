@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
+import java.net.InetAddress;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import client.ChatClient;
@@ -67,7 +68,8 @@ public class ChatClientGUI extends JFrame {
         bottomPanel.add(exitButton, BorderLayout.EAST);
         add(bottomPanel, BorderLayout.SOUTH);
         try {
-            this.client = new ChatClient("127.0.0.1", 12345, this::onMessageReceived);
+            InetAddress ipAdress=InetAddress.getByName("localhost");
+            this.client = new ChatClient(ipAdress, 12345, this::onMessageReceived);
             client.startClient();
         } catch (IOException e) {
             e.printStackTrace();
