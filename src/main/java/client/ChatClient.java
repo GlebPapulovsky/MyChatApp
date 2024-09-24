@@ -10,8 +10,8 @@ public class ChatClient {
     private PrintWriter out;
     private Consumer<String> onMessageReceived;
 
-    public ChatClient(InetAddress ip, int serverPort, Consumer<String> onMessageReceived) throws IOException {
-        this.socket = new Socket(ip, serverPort);
+    public ChatClient(String ip, int serverPort, Consumer<String> onMessageReceived) throws IOException {
+        this.socket = new Socket("188.170.82.204", serverPort);
         this.in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         this.out = new PrintWriter(socket.getOutputStream(), true);
         this.onMessageReceived = onMessageReceived;

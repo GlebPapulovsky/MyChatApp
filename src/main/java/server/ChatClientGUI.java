@@ -68,8 +68,7 @@ public class ChatClientGUI extends JFrame {
         bottomPanel.add(exitButton, BorderLayout.EAST);
         add(bottomPanel, BorderLayout.SOUTH);
         try {
-            InetAddress ipAdress=InetAddress.getByName("localhost");
-            this.client = new ChatClient(ipAdress, 12345, this::onMessageReceived);
+            this.client = new ChatClient("188.170.82.204", 12345, this::onMessageReceived);
             client.startClient();
         } catch (IOException e) {
             e.printStackTrace();
