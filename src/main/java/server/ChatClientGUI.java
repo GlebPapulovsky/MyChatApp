@@ -9,6 +9,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import client.ChatClient;
 
+
+
+
 public class ChatClientGUI extends JFrame {
     private JTextArea messageArea;
     private JTextField textField;
@@ -68,7 +71,7 @@ public class ChatClientGUI extends JFrame {
         bottomPanel.add(exitButton, BorderLayout.EAST);
         add(bottomPanel, BorderLayout.SOUTH);
         try {
-            this.client = new ChatClient("188.170.82.204", 12345, this::onMessageReceived);
+            this.client = new ChatClient("192.168.8.1", 12345, this::onMessageReceived);
             client.startClient();
         } catch (IOException e) {
             e.printStackTrace();

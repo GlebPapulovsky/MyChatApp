@@ -9,7 +9,7 @@ public class ChatServer {
     public static void main(String[] args) throws IOException {
 
         ServerSocket serverSocket = new ServerSocket(12345);
-        System.out.println(serverSocket.getInetAddress().getByName("localhost"));
+        System.out.println(serverSocket.getInetAddress().getByName("188.170.82.204"));
         System.out.println("Server started. Waiting for clients...");
 
         while (true) {
