@@ -7,9 +7,9 @@ public class ChatServer {
     private static List<ClientHandler> clients = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
-
-        ServerSocket serverSocket = new ServerSocket(12345);
-        System.out.println(serverSocket.getInetAddress().getByName("188.170.82.204"));
+        //InetAddress locIP=InetAddress.getByName("188.170.82.204");
+        ServerSocket serverSocket = new ServerSocket(8080);
+        
         System.out.println("Server started. Waiting for clients...");
 
         while (true) {

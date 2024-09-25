@@ -11,7 +11,7 @@ public class ChatClient {
     private Consumer<String> onMessageReceived;
 
     public ChatClient(String ip, int serverPort, Consumer<String> onMessageReceived) throws IOException {
-        this.socket = new Socket(InetAddress.getByName("192.168.8.1"), serverPort);
+        this.socket = new Socket(InetAddress.getByName(ip), serverPort);
         this.in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         this.out = new PrintWriter(socket.getOutputStream(), true);
         this.onMessageReceived = onMessageReceived;
