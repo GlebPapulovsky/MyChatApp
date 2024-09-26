@@ -71,7 +71,7 @@ public class ChatClientGUI extends JFrame {
         bottomPanel.add(exitButton, BorderLayout.EAST);
         add(bottomPanel, BorderLayout.SOUTH);
         try {
-            this.client = new ChatClient("192.168.8.100", 8090, this::onMessageReceived);
+            this.client = new ChatClient("192.168.8.1", 8090, this::onMessageReceived);
             client.startClient();
         } catch (IOException e) {
             e.printStackTrace();
