@@ -8,7 +8,7 @@ public class ChatServer {
 
     public static void main(String[] args) throws IOException {
         //InetAddress locIP=InetAddress.getByName("188.170.82.204");
-        ServerSocket serverSocket = new ServerSocket(8080);
+        ServerSocket serverSocket = new ServerSocket(8090,40,InetAddress.getByName("192.168.8.100"));
         
         System.out.println("Server started. Waiting for clients...");
 
